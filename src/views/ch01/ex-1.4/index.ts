@@ -67,3 +67,5 @@ function drawClock() {
 // Initialization................................................
 context.font = FONT_HEIGHT + 'px Arial'
 setInterval(drawClock, 1000)
+
+export {}
