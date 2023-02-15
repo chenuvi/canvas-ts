@@ -1,0 +1,15 @@
+﻿const $ = document.querySelector.bind(document);
+const canvas = $("#canvas") as HTMLCanvasElement,
+  context = canvas.getContext("2d") as CanvasRenderingContext2D;
+context.lineWidth = 30;
+
+context.font = "24px Helvetica";
+
+context?.fillText("click anywhere to erase", 175, 40);
+
+context.strokeRect(75, 100, 200, 200);
+context.fillRect(325, 100, 200, 200);
+
+context.canvas.onmousedown = (e) => {
+  context.clearRect(0, 0, canvas.width, canvas.height);
+};
